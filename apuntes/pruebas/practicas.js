@@ -1,26 +1,47 @@
-let tarjetaCapturada = document.getElementById("card")
-//--------------- getElementById------
-console.log ("MUESTRO EN CONSOLA TODO EL CONTENIDO DE CARD INCLUSIVE LA PROMER ETIQUETA")
-console.log(tarjetaCapturada)
+let listaD = document.createElement("ul");
+document.body.appendChild(listaD);
 
-console.log ("MUESTRO TODO EL CONTENIDO DE CARD, INCLUYENDO LOS ESPACIOS DE INDETANDO")
-console.log(tarjetaCapturada.innerHTML)
+let itemLista1 = document.createElement("li");
+itemLista1.textContent = "Mucha tos en el aula";
 
-console.log ("MUESTRA EN CONSOLA SOLO EL TEXTO CONTENIDO EN CARD")
-console.log(tarjetaCapturada.innerHTML)
+let itemLista2 = document.createElement("li");
+itemLista2.textContent = "Nos vamos a enfermar todos";
 
-//-----------querySelector-----------
-let capturaQuery = document.querySelector(".texto1")
-console.log ("muestro capturaQuery")
-console.log(capturaQuery.innerText)
+let salto = document.createElement("hr");
 
-//-----------querySelectorAll-----------
-// let capturaQueryAll = document.querySelectorAll("li")
-// console.log ("muestro capturaQuery TODOS")
-// console.log(capturaQueryAll[2].innerText)
+let item3 = document.createElement("li");
+item3.textContent = "Y se viene el finde largoo!!";
 
-let capturaQueryAll = document.querySelectorAll("li")
+listaD.appendChild(itemLista1);
+listaD.appendChild(itemLista2);
+listaD.appendChild(salto);
+listaD.appendChild(item3);
 
-capturaQueryAll.forEach((elemento) => {
-console.log(elemento);
-});
+//------aca selecciono el footer------
+let futer = document.getElementById("piepagina");
+futer.appendChild(listaD);
+//futer.style.backgroundColor = "violet"
+item3.style.fontFamily = "Impact"
+futer.style.padding = "1rem"
+futer.style.boxShadow = "0 0 15px -5px black"
+
+let hacheTres = document.querySelector("h3");
+//hacheTres.classList.add("subrayado");
+
+let itemLista5 = document.querySelectorAll("li");
+itemLista5[4].classList.remove("texto1");
+
+function agregar(){
+    hacheTres.classList.add("subrayado")
+}
+
+function remove(){
+    hacheTres.classList.remove("subrayado")
+}
+
+let menuLateral = document.querySelector("aside")
+
+
+function mostrarMenu(){
+    menuLateral.classList.toggle("mostrar")
+}

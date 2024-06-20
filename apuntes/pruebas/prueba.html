@@ -12,16 +12,43 @@
 
     <main>
         <div class="tarjeta" id="card">
-            <h3>Soy una tarjeta</h3>
+            <h3>Iniciar Sesion</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, repudiandae! Temporibus, vero ipsam
                 quaerat soluta ab .</p>
             <ul>
                 <li class="texto1">Empanada</li>
-                <li>Milanesa</li>
-                <li>Pan casero</li>
+                <li>Empanada</li>
+                <li>Asado</li>
+                <li class="texto1">Empanada Pollito</li>
+                <li class="texto1 subrayado">Empanada Choclo</li>
+
             </ul>
+            <div class="botonera">
+                <button id="agregar" onclick="agregar()">Agregar clase</button>
+                <button id="remove" onclick="remove()">Remover clase</button>
+            </div>
         </div>
+        <footer id="piepagina"></footer>
     </main>
+
+    <button class="botonMenu" onclick="mostrarMenu()">M</button>
+
+    <aside>
+        <ul>
+            <li>ENLACE 1</li>
+            <li>ENLACE 2</li>
+            <li>ENLACE 3</li>
+            <li>ENLACE 4</li>
+            <li>ENLACE 5</li>
+        </ul>
+        <button popovertarget="ventanita">Moatrar modal o oppap</button>
+
+        <div popover id="ventanita">acaa va el contenido y botones<br>
+        <h2>titulo</h2>
+        <button>guardar</button>
+        </div>
+
+    </aside>
 
     <script src="practicas.js"></script>
 </body>
